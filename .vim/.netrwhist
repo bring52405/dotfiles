@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/bring/Downloads/ValidationReports/OSPatchingAndUpgrades/Clinical Galaxy Production - clngx-1-dev'
+let g:netrw_dirhist_8='/Users/bring/Downloads/ValidationReports/OSPatchingAndUpgrades'
+let g:netrw_dirhist_7='/Users/bring/Downloads/ValidationReports'
+let g:netrw_dirhist_6='/Users/bring/Downloads'
+let g:netrw_dirhist_5='/Users/bring'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_3='/Users/bring'
+let g:netrw_dirhist_2='/Users'
+let g:netrw_dirhist_1='/Users/bring'
