@@ -72,66 +72,15 @@ sudo dnf distro-sync -y
 
 sudo dnf install \
 -y \
-#arc-theme `#A more comfortable GTK/Gnome-Shell Theme` \
-#blender `#3D Software Powerhouse` \
-#breeze-cursor-theme `#A more comfortable Cursor Theme from KDE` \
-#calibre `#Ebook management` \
-#chrome-gnome-shell `#Gnome <> Browser Integration for the gnome plugins website` \
-#chromium-vaapi `#Comes with hardware acceleration and all Codecs` \
-#darktable `#Easy RAW Editor` \
-#evolution-spamassassin `#Helps you deal with spam in Evolution` \
 exfat-utils `#Allows managing exfat (android sd cards and co)` \
 ffmpeg `#Adds Codec Support to Firefox, and in general` \
-#file-roller-nautilus `#More Archives supported in nautilus` \
-#filezilla `#S/FTP Access` \
 fuse-exfat `#Allows mounting exfat` \
 fuse-sshfs `#Allows mounting servers via sshfs` \
-#gimp `#The Image Editing Powerhouse - and its plugins` \
-#gimp-data-extras \
-#gimp-dbp \
-#gimp-dds-plugin \
-#gimp-elsamuko \
-#gimp-focusblur-plugin \
-#gimp-fourier-plugin \
-#gimpfx-foundry.noarch \
-#gimp-gap \
-#gimp-high-pass-filter \
-#gimp-layer-via-copy-cut \
-#gimp-lensfun \
-#gimp-lqr-plugin \
-#gimp-luminosity-masks \
-#gimp-paint-studio \
-#gimp-resynthesizer \
-#gimp-save-for-web \
-#gimp-wavelet-decompose \
-#gimp-wavelet-denoise-plugin \
 git `#VCS done right` \
-#gmic-gimp \
-#gnome-shell-extension-dash-to-dock `#dash for gnome` \
-#gnome-shell-extension-topicons-plus `#Notification Icons for gnome` \
-#gnome-shell-extension-user-theme `#Enables theming the gnome shell` \
-#gnome-tweak-tool `#Your central place to make gnome like you want` \
-#GREYCstoration-gimp \
-#gtkhash-nautilus `#To get a file has via gui` \
-#gvfs-fuse `#gnome<>fuse` \
-#gvfs-mtp `#gnome<>android` \
-#gvfs-nfs `#gnome<>ntfs` \
-#gvfs-smb `#gnome<>samba` \
-htop `#Cli process monitor` \
-#inkscape  `#Working with .svg files` \
-#kdenlive  `#Advanced Video Editor` \
-#keepassxc  `#Password Manager` \
-#krita  `#Painting done right keep in mind mypaint and gimp cant work together in current upstream versions - yet` \
-#libreoffice-gallery-vrt-network-equipment `#Network Icon Preset for LibreOffice` \
-lm_sensors `#Show your systems Temparature` \
+htop \
 'mozilla-fira-*' `#A nice font family` \
 mpv `#The best media player (with simple gui)` \
 mumble `#Talk with your friends` \
-#nautilus-extensions `#What it says on the tin` \
-#nautilus-image-converter \
-#nautilus-search-tool \
-#NetworkManager-openvpn-gnome `#To enforce that its possible to import .ovpn files in the settings` \
-#openshot `#Simple Video Editor` \
 openssh-askpass `#Base Lib to let applications request ssh pass via gui` \
 p7zip `#Archives` \
 p7zip-plugins `#Even more of them` \
@@ -139,11 +88,7 @@ papirus-icon-theme `#A quite nice icon theme` \
 pv `#pipe viewer - see what happens between the | with output | pv | receiver ` \
 python3-devel `#Python Development Gear` \
 python3-neovim `#Python Neovim Libs` \
-#rawtherapee `#Professional RAW Editor` \
-#spamassassin `#Dep to make sure it is locally installed for Evolution` \
 telegram-desktop `#Chatting, with newer openssl and qt base!` \
-#tilix `#The best terminal manager i know of` \
-#tilix-nautilus `#Adds right click open in tilix to nautilus` \
 transmission `#Torrent Client` \
 tuned `#Tuned can optimize your performance according to metrics. tuned-adm profile powersave can help you on laptops, alot` \
 unar `#free rar decompression` \
@@ -167,7 +112,6 @@ vim-enhanced `#full vim` \
 zsh `#Best shell` \
 zsh-syntax-highlighting `#Now with syntax highlighting` \
 cantata `#A beautiful mpd control` \
-#caddy `#A quick webserver that can be used to share a directory with others in <10 seconds` \
 cockpit `#A An awesome local and remote management tool` \
 cockpit-bridge \
 fortune-mod `#Inspiring Quotes` \
@@ -175,7 +119,6 @@ hexchat `#Irc Client` \
 libguestfs-tools `#Resize Vm Images and convert them` \
 ncdu `#Directory listing CLI tool. For a gui version take a look at "baobab"` \
 nextcloud-client `#Nextcloud Integration for Fedora` \
-#nextcloud-client-nautilus `#Also for the File Manager, shows you file status` \
 sqlite-analyzer `#If you work with sqlite databases` \
 sqlitebrowser `#These two help alot` \
 syncthing-gtk `#Syncing evolved - to use the local only mode open up the ports with firewall-cmd --add-port=port/tcp --permanent && firewall-cmd --reload` \
@@ -234,7 +177,7 @@ sudo systemctl enable --now cockpit.socket
 # Theming and GNOME Options
 ###
 # OpenBox Configuring
-touch ~/.config/openbox/autostart
+mkdir -p ~/.config/openbox && touch ~/.config/openbox/autostart
 
 # Set desktop wallpaper:
 #feh --bg-scale ~/path/to/wallpaper.png &
