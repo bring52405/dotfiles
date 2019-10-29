@@ -132,7 +132,8 @@ tint2 \
 volumeicon \
 xorg-x11-server-utils \
 network-manager-applet \
-lightdm
+lightdm \
+roxterm
 
 ###
 # Remove some un-needed stuff

@@ -1,0 +1,15 @@
+# Show system tray
+tint2 &
+
+# Set desktop wallpaper:
+#feh --bg-scale ~/path/to/wallpaper.png &
+
+# Show system info
+conky &
+
+#NetworkManager
+nm-applet &
+
+#Volume control in system tray
+volumeicon &
+
