@@ -1,15 +1,15 @@
 #!/usr/bin/python
 import pygame
 import curses
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 
 
-GPIO.setmode ( GPIO.BCM )
-GPIO.setup ( 4 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
-GPIO.setup ( 18 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
-GPIO.setup ( 22 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
-GPIO.setup ( 23 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
-GPIO.setup ( 25 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
+#GPIO.setmode ( GPIO.BCM )
+#GPIO.setup ( 4 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
+#GPIO.setup ( 18 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
+#GPIO.setup ( 22 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
+#GPIO.setup ( 23 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
+#GPIO.setup ( 25 , GPIO.IN , pull_up_down=GPIO.PUD_UP )
 
 def showWinner ( winner ):
    global screen
@@ -44,7 +44,8 @@ def getBuzzers():
          break
 
 pygame.display.init()
-screen = pygame.display.set_mode ( ( 1680 , 1050 ) )
+#screen = pygame.display.set_mode ( ( 1680 , 1050 ) )
+screen = pygame.display.set_mode ( ( 1024 , 768 ) )
 terminal = curses.initscr()
 curses.cbreak()
 terminal.nodelay ( 1 )
@@ -56,13 +57,13 @@ terminal.addstr ( 11 , 5 , "             x -- Exit (Careful, no confirmation)" )
 numbers = list()
 left = 0
 numbers.append ( ( pygame.image.load ( "numbers_01.jpg" ) , left ) )
-left += numbers [ 0 ] [ 0 ].get_width()
+#left += numbers [ 0 ] [ 0 ].get_width()
 numbers.append ( ( pygame.image.load ( "numbers_02.jpg" ) , left ) )
-left += numbers [ 1 ] [ 0 ].get_width()
+#left += numbers [ 0 ] [ 0 ].get_width()
 numbers.append ( ( pygame.image.load ( "numbers_03.jpg" ) , left ) )
-left += numbers [ 2 ] [ 0 ].get_width()
+#left += numbers [ 0 ] [ 0 ].get_width()
 numbers.append ( ( pygame.image.load ( "numbers_04.jpg" ) , left ) )
-left += numbers [ 3 ] [ 0 ].get_width()
+#left += numbers [ 0 ] [ 0 ].get_width()
 numbers.append ( ( pygame.image.load ( "numbers_05.jpg" ) , left ) )
 running = True
 while running == True:
@@ -77,6 +78,7 @@ while running == True:
    elif choice == ord ( "4" ):
       showWinner ( 4 )
    elif choice == ord ( "5" ):
+      reset()
       showWinner ( 5 )
    elif choice == ord ( "b" ):
       showWinner ( getBuzzers() )
