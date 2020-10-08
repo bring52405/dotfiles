@@ -5,6 +5,7 @@ set number
 set expandtab
 set smarttab
 set autoindent
+set hidden
 au FileType puppet setlocal tabstop=8 expandtab shiftwidth=2 softtabstop=2
 "colorscheme torte
 set modelines=0		" CVE-2007-2438
@@ -23,3 +24,7 @@ set statusline+=%*
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 let g:airline#extensions#tabline#enabled = 1
+let mapleader=','
+nnoremap <F5> "=strftime('%x %X')<CR>P
+inoremap <F5> <C-R>=strftime('%x %X')<CR>
+nnoremap gx :!xdg-open <cWORD> &<CR><CR>
