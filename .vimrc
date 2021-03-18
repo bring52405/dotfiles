@@ -7,14 +7,14 @@ set smarttab
 set autoindent
 set hidden
 au FileType puppet setlocal tabstop=8 expandtab shiftwidth=2 softtabstop=2
-"colorscheme torte
+colorscheme slate
 set modelines=0		" CVE-2007-2438
 set mouse=a
 set backspace=2		" more powerful backspacing
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 let skip_defaults_vim=1
-execute pathogen#infect()
+"execute pathogen#infect()
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -24,7 +24,13 @@ set statusline+=%*
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='bubblegum'
 let mapleader=','
 nnoremap <F5> "=strftime('%x %X')<CR>P
 inoremap <F5> <C-R>=strftime('%x %X')<CR>
 nnoremap gx :!xdg-open <cWORD> &<CR><CR>
+" NERDTree Key remaps
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
